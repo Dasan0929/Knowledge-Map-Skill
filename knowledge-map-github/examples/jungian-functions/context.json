@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.3",
+  "map_id": "jung-eight-demo",
+  "revision": 1,
+  "kind": "root",
+  "target": "学习荣格八维，能辨析八种功能态度并谨慎解释具体情境。",
+  "closure_goal": "能用两条坐标区分八种功能态度，对具体情境提出有依据的候选解释，并指出解释的边界。",
+  "scope": {
+    "included": [
+      "四种功能与两种态度",
+      "功能辨析与情境分析",
+      "必要的理论归属与证据边界"
+    ],
+    "excluded": [
+      "个人测型",
+      "十六型完整功能堆栈",
+      "临床判断"
+    ]
+  },
+  "assumptions": [
+    "这是 v0.3 文件管线的结构演示，不是对用户学习起点的正式评估。",
+    "未读取个人记忆；暂按入门至概念辨析设计。",
+    "示例用于展示地图结构，正式学科讲解仍应核查原始定义与版本差异。"
+  ],
+  "learner": {
+    "prior_knowledge": [],
+    "preferences": []
+  },
+  "memory_sources": [],
+  "parent": null,
+  "children": []
+}

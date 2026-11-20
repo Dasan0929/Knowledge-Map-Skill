@@ -1,0 +1,236 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "map_id",
+    "revision",
+    "kind",
+    "target",
+    "closure_goal",
+    "scope",
+    "assumptions",
+    "learner",
+    "memory_sources",
+    "parent",
+    "children"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.3"
+    },
+    "map_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "kind": {
+      "type": "string",
+      "enum": [
+        "root",
+        "subtopic"
+      ]
+    },
+    "target": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "closure_goal": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "included",
+        "excluded"
+      ],
+      "properties": {
+        "included": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "minItems": 1
+        },
+        "excluded": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    },
+    "learner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "prior_knowledge",
+        "preferences"
+      ],
+      "properties": {
+        "prior_knowledge": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "content",
+              "basis"
+            ],
+            "properties": {
+              "content": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "basis": {
+                "type": "string",
+                "enum": [
+                  "self_report",
+                  "observed",
+                  "assumed"
+                ]
+              }
+            }
+          }
+        },
+        "preferences": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      }
+    },
+    "memory_sources": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    },
+    "parent": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "map_path",
+            "node_id",
+            "node_fingerprint"
+          ],
+          "properties": {
+            "map_path": {
+              "type": "string",
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "node_id": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+            },
+            "node_fingerprint": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          }
+        }
+      ]
+    },
+    "children": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "node_id",
+          "map_path"
+        ],
+        "properties": {
+          "node_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+          },
+          "map_path": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Knowledge Map Context v0.3",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "kind": {
+            "const": "root"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "parent": {
+            "type": "null"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "parent": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "map_path",
+              "node_id",
+              "node_fingerprint"
+            ],
+            "properties": {
+              "map_path": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "node_id": {
+                "type": "string",
+                "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+              },
+              "node_fingerprint": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

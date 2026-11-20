@@ -1,0 +1,136 @@
+{
+  "nodes": [
+    {
+      "id": "1a95f45d183b1051",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 980,
+      "height": 176,
+      "color": "#D7E8DF",
+      "text": "# 荣格八维\n\n学习终点：能用两条坐标区分八种功能态度，对具体情境提出有依据的候选解释，并指出解释的边界。\n\n路线：待你确认 · 箭头：前置 → 后续"
+    },
+    {
+      "id": "35e415e93d026409",
+      "type": "text",
+      "x": 270,
+      "y": 276,
+      "width": 440,
+      "height": 360,
+      "color": "#E8EFE9",
+      "text": "建立坐标：八维从哪里来\n认识四种功能与内外倾两种态度，区分心理任务和定向依据，形成八维的整体框架。\n\n**核心问题**\n为什么四种功能能形成八种功能态度，而不是八项能力排名？\n\n状态：待学习"
+    },
+    {
+      "id": "9757b80b710ac806",
+      "type": "text",
+      "x": 0,
+      "y": 766,
+      "width": 440,
+      "height": 360,
+      "color": "#E8EFE9",
+      "text": "辨别知觉：具体经验与潜在可能\n在同一情境中比较感觉与直觉，并辨析 Se、Si、Ne、Ni 的不同定向。\n\n**核心问题**\n同一件事，四种知觉功能可能分别关注什么？\n\n状态：待学习"
+    },
+    {
+      "id": "68ccc4228cb1e79f",
+      "type": "text",
+      "x": 540,
+      "y": 766,
+      "width": 440,
+      "height": 360,
+      "color": "#E8EFE9",
+      "text": "辨别判断：概念关系与价值尺度\n比较思维和情感的判断任务，理解 Te、Ti、Fe、Fi 的取向，避免以性格好坏替代定义。\n\n**核心问题**\n四种判断功能如何形成判断，哪些表面印象不足以区分它们？\n\n状态：待学习"
+    },
+    {
+      "id": "59d76ea7b6fbd8fe",
+      "type": "text",
+      "x": 270,
+      "y": 1256,
+      "width": 440,
+      "height": 360,
+      "color": "#E8EFE9",
+      "text": "形成对照：相似行为的不同解释\n结合任务与定向两条坐标，比较易混功能，区分可见行为与关于心理过程的解释。\n\n**核心问题**\n为什么相同的外在行为，可能对应不同的功能解释？\n\n状态：待学习"
+    },
+    {
+      "id": "42937818982d727f",
+      "type": "text",
+      "x": 270,
+      "y": 1746,
+      "width": 440,
+      "height": 360,
+      "color": "#E8EFE9",
+      "text": "用于情境：提出并修正候选解释\n对一个具体案例提出候选解释，寻找支持信息和替代解释；信息不足时保留未知。\n\n**核心问题**\n如何完成一次有依据、可修正的情境分析？\n\n状态：待学习"
+    },
+    {
+      "id": "d2b6f79f0d1347dc",
+      "type": "text",
+      "x": 270,
+      "y": 2236,
+      "width": 440,
+      "height": 360,
+      "color": "#E8EFE9",
+      "text": "划清边界：理论说明能支持什么\n区分荣格原始框架与后续模型的用途，说明概念辨析、测评分数和经验验证之间的区别。\n\n**核心问题**\n哪些结论可以从这次分析得出，哪些需要更多证据？\n\n状态：待学习"
+    }
+  ],
+  "edges": [
+    {
+      "id": "d697bd0c4744e8ae",
+      "fromNode": "35e415e93d026409",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "9757b80b710ac806",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先修"
+    },
+    {
+      "id": "7bc36ede82173d16",
+      "fromNode": "35e415e93d026409",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "68ccc4228cb1e79f",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先修"
+    },
+    {
+      "id": "8754ca730bbbe30f",
+      "fromNode": "9757b80b710ac806",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "59d76ea7b6fbd8fe",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先修"
+    },
+    {
+      "id": "ad426d83d9d66184",
+      "fromNode": "68ccc4228cb1e79f",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "59d76ea7b6fbd8fe",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先修"
+    },
+    {
+      "id": "9397599dc7060c00",
+      "fromNode": "59d76ea7b6fbd8fe",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "42937818982d727f",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先修"
+    },
+    {
+      "id": "fe3da7eb5c58a75c",
+      "fromNode": "42937818982d727f",
+      "fromSide": "bottom",
+      "fromEnd": "none",
+      "toNode": "d2b6f79f0d1347dc",
+      "toSide": "top",
+      "toEnd": "arrow",
+      "label": "先修"
+    }
+  ]
+}

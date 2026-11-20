@@ -1,0 +1,4 @@
+interface:
+  display_name: "知识地图 v0.3"
+  short_description: "先澄清范围，再共创最小认知闭环，生成可视化画布并按需递归展开"
+  default_prompt: "使用 $knowledge-map 帮我确定学习范围，生成围绕最小认知闭环的知识骨架、Canvas 文件和可视化预览，结合我的反馈修改后再锁定。"

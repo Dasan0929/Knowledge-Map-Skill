@@ -1,0 +1,74 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "topic",
+    "map_status",
+    "nodes"
+  ],
+  "properties": {
+    "topic": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "map_status": {
+      "type": "string",
+      "enum": [
+        "pending_confirm",
+        "locked"
+      ]
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "content",
+          "core_question",
+          "prerequisites",
+          "status"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+          },
+          "content": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "core_question": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "prerequisites": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+            },
+            "uniqueItems": true
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "todo",
+              "learning",
+              "mastered",
+              "skipped"
+            ]
+          }
+        }
+      },
+      "minItems": 2,
+      "maxItems": 8
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Knowledge Map State v0.3"
+}
