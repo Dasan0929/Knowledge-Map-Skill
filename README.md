@@ -2,7 +2,7 @@
 
 Turn a topic into a visual learning map so you can see what to learn first and work through each module with an AI agent, one core question at a time.
 
-![Learning map for Jung’s eight function-attitudes](image.png)
+![Learning map for Jung’s eight function-attitudes](Knowledge-Map-Github/image.png)
 
 ## Quick start
 
